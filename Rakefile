@@ -5,10 +5,6 @@ RSpec::Core::RakeTask.new
 
 task :default => :spec
 
-desc "Ejecutar las expectativas de la clase Fraccion"
-task :spec do
-  sh "rspec -I. spec/fraccion_spec.rb"
-end
 
 desc "Ejecutar con documentacion"
 task :test do
