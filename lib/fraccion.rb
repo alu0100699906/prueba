@@ -42,12 +42,6 @@ class Fraccion
         (@numerador.to_f()/@denominador.to_f)
     end
 
-    #metodo para comparar si dos fracciones son iguales
-    def == (object)
-        if(@numerador == object.numerador && @denominador == object.denominador)
-             true
-        end
-    end
     #metodo para calcular el valor absoluto de una fraccion
     def abs ()
 	Fraccion.new(@numerador.abs,@denominador.abs)
