@@ -2,6 +2,10 @@
 require "gcd.rb"
 require "mcm.rb"
 
+#El módulo Comparable contiene todos los métodos que permiten hacer comparaciones (<,>,=>..)
+include Comparable
+
+
 class Fraccion 
     #metodo que permite acceder a los atributos de la clase
     attr_reader :numerador, :denominador
@@ -109,31 +113,8 @@ class Fraccion
 	 resto  
      end
      
-     #metodo para comprobar si una fraccion es menor que otra
-     def < (object)
-         if(self.to_float<object.to_float)
-                true
-         end
+     #Utilizamos el método <=> del módulo Comparable para realizar operaciones comparacionales de fracciones
+     def <=> (object)
+          self.to_float<=>object.to_float    
      end
-     
-     #metodo para comprobar si una fraccion es mayor que otra
-     def > (object)
-         if(self.to_float>object.to_float)
-                true
-         end
-     end
-     
-     #metodo para comprobar si una fraccion es menor o igual que otra
-     def <= (object)
-         if(self.to_float <= object.to_float)
-                true
-         end
-     end
- 
-     #metodo para comprobar si una fraccion es mayor o igual que otra
-     def >= (object)
-         if(self.to_float >= object.to_float)
-                true
-         end
-     end   
 end
