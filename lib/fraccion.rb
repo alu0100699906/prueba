@@ -2,7 +2,7 @@
 require "gcd.rb"
 require "mcm.rb"
 
-#El módulo Comparable contiene todos los métodos que permiten hacer comparaciones (<,>,=>..)
+#El modulo Comparable contiene todos los metodos que permiten hacer comparaciones (<,>,=>..)
 include Comparable
 
 
@@ -11,14 +11,14 @@ class Fraccion
     attr_reader :numerador, :denominador
 
     def initialize(n,d)
-        simp=gcd(n,d) #guarda el máximo comun divisor
+        simp=gcd(n,d) #guarda el maximo comun divisor
 
         if d!=0
             @numerador=n
             @denominador=d
         end
 
-     #utiliza el máximo comun divisor para simplificar la  fraccion
+     #utiliza el maximo comun divisor para simplificar la  fraccion
      @numerador, @denominador = n/simp, d/simp 
      end
     
@@ -107,7 +107,7 @@ class Fraccion
 	 resto  
      end
      
-     #Utilizamos el método <=> del módulo Comparable para realizar operaciones comparacionales de fracciones
+     #Utilizamos el metodo <=> del modulo Comparable para realizar operaciones comparacionales de fracciones
      def <=> (object)
           self.to_float<=>object.to_float    
      end
