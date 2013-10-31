@@ -1,5 +1,5 @@
 require "fraccion.rb"
-
+  
 describe Fraccion do #espectativa para la clase
 	##
 	describe "#se asignan bien los valores de denominador y numerador"do
