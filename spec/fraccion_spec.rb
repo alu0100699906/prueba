@@ -1,4 +1,4 @@
-require "lib/fraccion.rb"
+require "fraccion.rb"
 
 describe Fraccion do #espectativa para la clase
 	##
@@ -69,13 +69,13 @@ describe Fraccion do #espectativa para la clase
 	
 	##
 	describe " #Operaciones con fracciones"do
-		it ".recriprocal ->calcula inversa" do
+		it ".recriprocal calcula inversa" do
 			fa = Fraccion.new(3,2)
 			fb = Fraccion.new(2,3)
 		
 			(fa.reciprocal == fb).should be_true
 		end
-		it "-@ ->opuesto" do
+		it "-@ opuesto" do
 			fa = Fraccion.new(2,4)
 			fb = Fraccion.new(-1,2)
 			fc = Fraccion.new(1,-4)
@@ -84,7 +84,7 @@ describe Fraccion do #espectativa para la clase
 			(-fb).to_s.should eq("1/2")
 		    (-fc).should eq(Fraccion.new(1,4))
 		end
-		it "@+@ ->operacion suma" do
+		it "@+@ operacion suma" do
 			fa = Fraccion.new(3,2)
 			fb = Fraccion.new(1,4)
 			fc = Fraccion.new(7,4)
@@ -92,7 +92,7 @@ describe Fraccion do #espectativa para la clase
 			(fa + fb).should == fc
 			(fb + fc).should eq(Fraccion.new(2,1))
 		end
-		it "@-@ ->operacion resta" do
+		it "@-@ operacion resta" do
 			fa = Fraccion.new(2,3)
 			fb = Fraccion.new(1,4)
 			fc = Fraccion.new(5,12)
@@ -100,7 +100,7 @@ describe Fraccion do #espectativa para la clase
 			(fa - fb).should == fc
 			(fb - fc).should eq(Fraccion.new(-1,6))
 		end
-		it "@*@ ->operacion producto" do
+		it "@*@ operacion producto" do
 			fa = Fraccion.new(2,3)
 			fb = Fraccion.new(1,4)
 			fc = Fraccion.new(5,2)
@@ -109,7 +109,7 @@ describe Fraccion do #espectativa para la clase
 			(fa * fc).should eq(Fraccion.new(5,3))
 			(fb * fc).should eq(Fraccion.new(5,8))
 		end
-		it "@/@ ->operacion division" do
+		it "@/@ operacion division" do
 			fa = Fraccion.new(2,3)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(4,15)
@@ -117,7 +117,7 @@ describe Fraccion do #espectativa para la clase
 			(fa / fb == fc).should be_true
 			(fa / fc == fb).should be_true
 		end
-		it "@%@ ->operacion modulo" do
+		it "@%@ operacion modulo" do
 			fa = Fraccion.new(2,3)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(4,15)
@@ -125,7 +125,7 @@ describe Fraccion do #espectativa para la clase
 			(fa % fb).to_s.should =="2/3"
 			(fa % fc).to_s.should =="2/15"
 		end
-		it "@<@ ->operacion menor que" do
+		it "@<@ operacion menor que" do
 			fa = Fraccion.new(1,4)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(3,4)
@@ -134,7 +134,7 @@ describe Fraccion do #espectativa para la clase
 			(fa < fc).should be_true
 			(fc < fb).should be_true
 		end
-		it "@>@ ->operacion mayor que" do
+		it "@>@ operacion mayor que" do
 			fa = Fraccion.new(1,4)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(3,4)
@@ -143,7 +143,7 @@ describe Fraccion do #espectativa para la clase
 			(fc > fa).should be_true
 			(fb > fc).should be_true
 		end
-		it "@<=@ ->operacion menor o igual que" do
+		it "@<=@ operacion menor o igual que" do
 			fa = Fraccion.new(1,4)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(1,4)
@@ -152,7 +152,7 @@ describe Fraccion do #espectativa para la clase
 			(fa <= fc).should be_true
 			(fc <= fb).should be_true
 		end
-		it "@>=@ ->operacion mayor o igual que" do
+		it "@>=@ operacion mayor o igual que" do
 			fa = Fraccion.new(1,4)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(1,4)
