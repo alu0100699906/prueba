@@ -126,7 +126,7 @@ describe Fraccion do #espectativa para la clase
 			(fa % fc).to_s.should =="2/15"
 		end
 		it "@<@ ->operacion menor que" do
-			fa = Fraccion.new(7,4)
+			fa = Fraccion.new(1,4)
 			fb = Fraccion.new(5,2)
 			fc = Fraccion.new(3,4)
 			

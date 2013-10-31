@@ -2,19 +2,23 @@
 require "gcd.rb"
 require "mcm.rb"
 
+#El modulo Comparable contiene todos los metodos que permiten hacer comparaciones (<,>,=>..)
+include Comparable
+
+
 class Fraccion 
     #metodo que permite acceder a los atributos de la clase
     attr_reader :numerador, :denominador
 
     def initialize(n,d)
-        simp=gcd(n,d) #guarda el máximo comun divisor
+        simp=gcd(n,d) #guarda el maximo comun divisor
 
         if d!=0
             @numerador=n
             @denominador=d
         end
 
-     #utiliza el máximo comun divisor para simplificar la  fraccion
+     #utiliza el maximo comun divisor para simplificar la  fraccion
      @numerador, @denominador = n/simp, d/simp 
      end
     
@@ -38,12 +42,6 @@ class Fraccion
         (@numerador.to_f()/@denominador.to_f)
     end
 
-    #metodo para comparar si dos fracciones son iguales
-    def == (object)
-        if(@numerador == object.numerador && @denominador == object.denominador)
-             true
-        end
-    end
     #metodo para calcular el valor absoluto de una fraccion
     def abs ()
 	Fraccion.new(@numerador.abs,@denominador.abs)
@@ -109,31 +107,8 @@ class Fraccion
 	 resto  
      end
      
-     #metodo para comprobar si una fraccion es menor que otra
-     def < (object)
-         if(self.to_float<object.to_float)
-                true
-         end
+     #Utilizamos el metodo <=> del modulo Comparable para realizar operaciones comparacionales de fracciones
+     def <=> (object)
+          self.to_float<=>object.to_float    
      end
-     
-     #metodo para comprobar si una fraccion es mayor que otra
-     def > (object)
-         if(self.to_float>object.to_float)
-                true
-         end
-     end
-     
-     #metodo para comprobar si una fraccion es menor o igual que otra
-     def <= (object)
-         if(self.to_float <= object.to_float)
-                true
-         end
-     end
- 
-     #metodo para comprobar si una fraccion es mayor o igual que otra
-     def >= (object)
-         if(self.to_float >= object.to_float)
-                true
-         end
-     end   
 end
