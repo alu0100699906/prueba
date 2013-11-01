@@ -1,4 +1,4 @@
-+﻿# Fracción [![Build Status](https://travis-ci.org/alu0100699906/prct07.png?branch=master)](https://travis-ci.org/alu0100699906/prct07)
++﻿# Fracción [![Build Status](https://travis-ci.org/alu0100699906/prueba.png?branch=master)](https://travis-ci.org/alu0100699906/prueba)
 
 Considere la clase Ruby para representar fracciones que ha implementado usando el Desarrollo dirigido por pruebas (Test Driven Development - TDD) usando como herramienta Rspec. 
 
