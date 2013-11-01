@@ -1,6 +1,7 @@
 #! /usr/bin/ruby
-require "gcd.rb"
-require "mcm.rb"
+
+require "lib/gcd.rb"
+require "lib/mcm.rb"
 
 #El modulo Comparable contiene todos los metodos que permiten hacer comparaciones (<,>,=>..)
 include Comparable

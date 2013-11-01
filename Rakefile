@@ -1,10 +1,10 @@
-$:.unshift File.dirname(__FILE__) + 'lib'
-$:.unshift './lib', './spec'  
+$:.unshift File.dirname(__FILE__) + 'lib' 
 
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new
 
 task :default => :spec
+
 
 desc "Ejecutar con documentacion"
 task :test do
@@ -17,7 +17,9 @@ task :thtml do
 end 
 
 
-desc "Ejecutar el main"
+desc "Espectativas de la clase fraccion"
 task :bin do
-  sh "./lib/fraccion.rb"
+  sh "ruby -I. lib/frac_main.rb"
+
 end 
+
